@@ -323,7 +323,7 @@ class ConsolidaHandler implements HttpHandler {
                 List<XSSFTable> tables = sheet.getTables();
                 if (!tables.isEmpty()) {
                     XSSFTable table = tables.get(0);
-                    String newRef = "A4:N" + (lastDataRow + totalWritten);
+                    String newRef = "A4:N" + (lastDataRow + 1 + totalWritten);
                     table.getCTTable().setRef(newRef);
                     LOG.info("expanded TabellaRDA ref to " + newRef);
                 }
